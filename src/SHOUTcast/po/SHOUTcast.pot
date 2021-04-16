@@ -1,276 +1,268 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Shoutcast\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-09 23:22+0000\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Rob van der Does <RobvanderDoes@Gmail.com>\n"
-"Language-Team: Andy Blackburn/Rob van der Does\n"
-"Language: nl_NL\n"
+"POT-Creation-Date: 2021-04-16 19:04+0430\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 2.0.6\n"
-"X-Poedit-SearchPath-0: ../src\n"
 
 #, python-format
 msgid ""
 "%s\n"
 "Press OK to try again..."
 msgstr ""
-"%s\n"
-"Druk op OK om te herhalen..."
 
 #, python-format
 msgid ""
 "%s\n"
 "Press green-button to try again..."
 msgstr ""
-"%s\n"
-"Druk op de groene toets om te herhalen...."
 
 msgid ">= 128 kbps"
-msgstr ">= 128 kbps"
+msgstr ""
 
 msgid ">= 192 kbps"
-msgstr ">= 192 kbps"
+msgstr ""
 
 msgid ">= 256 kbps"
-msgstr ">= 256 kbps"
+msgstr ""
 
 msgid ">= 64 kbps"
-msgstr ">= 64 kbps"
+msgstr ""
 
 msgid "Activate Picture in Picture"
-msgstr "Activeer Picture in Picture"
+msgstr ""
 
 msgid "Add current playing stream to favorite"
-msgstr "Lopende zender aan favorietenlijst toevoegen"
+msgstr ""
 
 msgid "Add current selected genre to favorite"
-msgstr "Geselekteerd genre aan favorietenlijst toevoegen"
+msgstr ""
 
 msgid "Add current selected station to favorite"
-msgstr "Geselekteerd station aan favorietenlijst toevoegen"
+msgstr ""
 
 msgid "Add sequence number to output file"
-msgstr "Voeg volgordenummer toe aan outputbestand"
+msgstr ""
 
 msgid "All"
-msgstr "Alle"
+msgstr ""
 
 #, python-format
 msgid "Audio: %s"
-msgstr "Audio: %s"
+msgstr ""
 
 #, python-format
 msgid "Bit rate: %s kbps"
-msgstr "Bitrate: %s kbps"
+msgstr ""
 
 msgid "Cancel"
-msgstr "Annuleren"
+msgstr ""
 
 msgid "Choose action:"
-msgstr "Kies actie:"
+msgstr ""
 
 msgid "Config"
-msgstr "Configuratie"
+msgstr ""
 
 msgid "Coverheight:"
-msgstr "Coverhoogte:"
+msgstr ""
 
 msgid "Coverwidth:"
-msgstr "Coverbreedte:"
+msgstr ""
 
 msgid "Create a directory for each stream"
-msgstr "Voor elke opname een eigen map maken"
+msgstr ""
 
 msgid "Disable Picture in Picture"
-msgstr "Deactiveer Picture in Picture"
+msgstr ""
 
 msgid "Do you really want to stop the recording?"
-msgstr "Wilt u d eopname echt stoppen?"
+msgstr ""
 
 msgid "Enter in minutes (0 means unlimited)"
-msgstr "Geef Minuten aan (0 = onbeperkt)"
+msgstr ""
 
 msgid "Enter new name for favorite item"
-msgstr "Geef een nieuwe naam op voor de favoriet"
+msgstr ""
 
 msgid "Enter text to search for"
-msgstr "Geef zoekargument op"
+msgstr ""
 
 #, python-format
 msgid "Error create directory %s!"
-msgstr "Fout bij creëren map %s!"
+msgstr ""
 
 msgid "Error downloading cover..."
-msgstr "Fout met het downloaden van cover..."
+msgstr ""
 
 msgid "Favorite list"
-msgstr "Favorietenlijst"
+msgstr ""
 
 msgid "Favorites"
-msgstr "Favorieten"
+msgstr ""
 
 msgid "First play streaming!"
-msgstr "Ga eerst streamen!"
+msgstr ""
 
 msgid "Genres"
-msgstr "Genres"
+msgstr ""
 
 #, python-format
 msgid "Getting %s"
-msgstr "Verkrijg %s"
+msgstr ""
 
 #, python-format
 msgid "Getting SHOUTcast genre list for %s..."
-msgstr "Verkrijgt SHOUTcast genre lijst voor %s..."
+msgstr ""
 
 msgid "Getting SHOUTcast genre list..."
-msgstr "SHOUTcast genrelijst laden..."
+msgstr ""
 
 #, python-format
 msgid ""
 "Getting streaming data from\n"
 "%s"
 msgstr ""
-"Verkrijg data van \n"
-"%s"
 
 msgid ""
 "Got 0 genres. Could be a network problem.\n"
 "Please try again..."
 msgstr ""
-"Geen genres geladen. Dit kan een netwerkprobleem zijn.\n"
-"Probeer het nogmaals..."
 
 msgid "Hide"
-msgstr "Verbergen"
+msgstr ""
 
 msgid "Invalid Location"
-msgstr "Ongeldig opnamepad"
+msgstr ""
 
 msgid "Menu PiP"
-msgstr "Menu PiP"
+msgstr ""
 
 msgid "Move Picture in Picture"
-msgstr "Verplaats Picture in Picture"
+msgstr ""
 
 msgid "No streaming data found..."
-msgstr "Geen data gevonden...."
+msgstr ""
 
 msgid "OK"
-msgstr "OK"
+msgstr ""
 
 msgid "Off"
-msgstr "Uit"
+msgstr ""
 
 msgid "Only running streamings can be recorded!"
 msgstr ""
-"Alleen aktuele streams kunnen worden opgenomen.\n"
-"Opname wordt niet gestart."
 
 msgid "Record"
-msgstr "Opname"
+msgstr ""
 
 msgid "Recording length"
-msgstr "Opname duur"
+msgstr ""
 
 msgid "Recording location:"
-msgstr "Opnamepad:"
+msgstr ""
 
 msgid "Recording stream station"
-msgstr "Momenteel lopende opname"
+msgstr ""
 
 msgid "Reload station list:"
-msgstr "Stationslijst opnieuw laden:"
+msgstr ""
 
 msgid "Rip to single file, name is timestamped"
-msgstr "Opslaan als enkel bestand (datum/tijd wordt daaraan toegevoegd)"
+msgstr ""
 
 msgid "SHOUTcast genre list"
-msgstr "SHOUTcast genelijst"
+msgstr ""
 
 msgid "SHOUTcast setup"
-msgstr "SHOUTcast instellingen"
+msgstr ""
 
 #, python-format
 msgid "SHOUTcast station list for %s"
-msgstr "SHOUTcast stationsljist voor %s"
+msgstr ""
 
 msgid "Search"
-msgstr "Zoek"
+msgstr ""
 
 #, python-format
 msgid "Searching SHOUTcast for %s..."
-msgstr "Doorzoek SHOUTcast naar %s..."
+msgstr ""
 
 msgid "Select record path for streamripper"
-msgstr "Kies opnamepad voor streamripper"
+msgstr ""
 
 msgid "Show cover:"
-msgstr "Toon cover:"
+msgstr ""
 
 msgid "Show in extension menu:"
-msgstr "Toon in extensie menu:"
+msgstr ""
 
 #, python-format
 msgid "Station: %s"
-msgstr "Station: %s"
+msgstr ""
 
 msgid "Stations"
-msgstr "Stations"
+msgstr ""
 
 msgid "Stop record"
-msgstr "Stop opname"
+msgstr ""
 
 msgid "Stream stopped playing, playback of stream stopped!"
-msgstr "Stream gestopt met afspelen, afspelen van stream gestopt!"
+msgstr ""
 
 msgid "Streaming rate:"
-msgstr "Bitrate:"
+msgstr ""
 
 #, python-format
 msgid "Title: %s"
-msgstr "Titel: %s"
+msgstr ""
 
 msgid "Title: n/a"
-msgstr "Titel: n/a"
+msgstr ""
 
 msgid "Zap focus to Picture in Picture"
-msgstr "Zap focus naar Picture in Picture"
+msgstr ""
 
 msgid "Zap focus to main screen"
-msgstr "Zap focus naar hoofdscherm"
+msgstr ""
 
 msgid "every five minutes"
-msgstr "elke 5 minuten"
+msgstr ""
 
 msgid "every minute"
-msgstr "elke minuut"
+msgstr ""
 
 msgid "every three minutes"
-msgstr "elke 3 minuten"
+msgstr ""
 
 #, python-format
 msgid "genre %s"
-msgstr "genre %s"
+msgstr ""
 
 msgid "listen to shoutcast internet-radio"
-msgstr "luister naar Shoutcast internet-radio"
+msgstr ""
 
 msgid "remove current selected favorite"
-msgstr "Verwijderen"
+msgstr ""
 
 msgid "rename current selected favorite"
-msgstr "hernoemen"
+msgstr ""
 
 #, python-format
 msgid "search-criteria %s"
-msgstr "Zoekcriterium %s"
+msgstr ""
 
 msgid "streamripper not installed!"
-msgstr "Streamripper niet geïnstalleerd!"
+msgstr ""
