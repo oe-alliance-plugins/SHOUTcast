@@ -1,35 +1,35 @@
 
 
-# <p align="center">shoutcast Plugin for Enigma2 (E²) ![GitHub repo size](https://img.shields.io/github/repo-size/oe-alliance-plugins/shoutcast.svg)</p>
+# <p align="center">SHOUTcast Plugin for Enigma2 (E²) ![GitHub repo size](https://img.shields.io/github/repo-size/oe-alliance-plugins/SHOUTcast.svg)</p>
 
 **A client to listen and record SHOUTcast internet radio**
 
 
 ## Github status
-[![Build](https://github.com/oe-alliance-plugins/shoutcast/actions/workflows/buildbot.yml/badge.svg)](https://github.com/oe-alliance-plugins/shoutcast/actions/workflows/buildbot.yml)
-[![Lint Status](https://github.com/oe-alliance-plugins/shoutcast/actions/workflows/pylint.yml/badge.svg)](https://github.com/oe-alliance-plugins/shoutcast/actions/workflows/pylint.yml)
-[![Ruff Status](https://github.com/oe-alliance-plugins/shoutcast/actions/workflows/ruff.yml/badge.svg)](https://github.com/oe-alliance-plugins/shoutcast/actions/workflows/ruff.yml)
-[![Build Status](https://github.com/oe-alliance-plugins/shoutcast/actions/workflows/compile.yml/badge.svg)](https://github.com/oe-alliance-plugins/shoutcast/actions/workflows/compile.yml)
-[![AUTOTAG](https://github.com/oe-alliance-plugins/shoutcast/actions/workflows/autotag.yml/badge.svg)](https://github.com/oe-alliance-plugins/shoutcast/actions/workflows/autotag.yml)
+[![Build](https://github.com/oe-alliance-plugins/SHOUTcast/actions/workflows/buildbot.yml/badge.svg)](https://github.com/oe-alliance-plugins/SHOUTcast/actions/workflows/buildbot.yml)
+[![Lint Status](https://github.com/oe-alliance-plugins/SHOUTcast/actions/workflows/pylint.yml/badge.svg)](https://github.com/oe-alliance-plugins/SHOUTcast/actions/workflows/pylint.yml)
+[![Ruff Status](https://github.com/oe-alliance-plugins/SHOUTcast/actions/workflows/ruff.yml/badge.svg)](https://github.com/oe-alliance-plugins/SHOUTcast/actions/workflows/ruff.yml)
+[![Build Status](https://github.com/oe-alliance-plugins/SHOUTcast/actions/workflows/compile.yml/badge.svg)](https://github.com/oe-alliance-plugins/SHOUTcast/actions/workflows/compile.yml)
+[![AUTOTAG](https://github.com/oe-alliance-plugins/SHOUTcast/actions/workflows/autotag.yml/badge.svg)](https://github.com/oe-alliance-plugins/SHOUTcast/actions/workflows/autotag.yml)
 
 
-[![Plugin Version](https://img.shields.io/github/v/tag/oe-alliance-plugins/shoutcast?label=Latest%20Version&color=darkviolet)](https://github.com/oe-alliance-plugins/shoutcast/tags)
-[![Latest Release](https://img.shields.io/github/release-date/oe-alliance-plugins/shoutcast?label=From&color=darkviolet)](https://github.com/oe-alliance-plugins/shoutcast/releases/latest)
-[![Github last commit](https://img.shields.io/github/last-commit/oe-alliance-plugins/shoutcast)](https://github.com/oe-alliance-plugins/shoutcast)
-[![GitHub Activity](https://img.shields.io/github/commit-activity/y/oe-alliance-plugins/shoutcast.svg?label=commits)](https://github.com/oe-alliance-plugins/shoutcast/commits)
-[![GitHub Activity](https://img.shields.io/github/commit-activity/m/oe-alliance-plugins/shoutcast.svg?label=commits)](https://github.com/oe-alliance-plugins/shoutcast/commits)
+[![Plugin Version](https://img.shields.io/github/v/tag/oe-alliance-plugins/SHOUTcast?label=Latest%20Version&color=darkviolet)](https://github.com/oe-alliance-plugins/SHOUTcast/tags)
+[![Latest Release](https://img.shields.io/github/release-date/oe-alliance-plugins/SHOUTcast?label=From&color=darkviolet)](https://github.com/oe-alliance-plugins/SHOUTcast/releases/latest)
+[![Github last commit](https://img.shields.io/github/last-commit/oe-alliance-plugins/SHOUTcast)](https://github.com/oe-alliance-plugins/SHOUTcast)
+[![GitHub Activity](https://img.shields.io/github/commit-activity/y/oe-alliance-plugins/SHOUTcast.svg?label=commits)](https://github.com/oe-alliance-plugins/SHOUTcast/commits)
+[![GitHub Activity](https://img.shields.io/github/commit-activity/m/oe-alliance-plugins/SHOUTcast.svg?label=commits)](https://github.com/oe-alliance-plugins/SHOUTcast/commits)
 
 ## SonarCloud status
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_shoutcast&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_shoutcast)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_shoutcast&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_shoutcast)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_shoutcast&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_shoutcast)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_shoutcast&metric=bugs)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_shoutcast)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_shoutcast&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_shoutcast)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_shoutcast&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_shoutcast)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_shoutcast&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_shoutcast)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_shoutcast&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_shoutcast)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_SHOUTcast&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_SHOUTcast)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_SHOUTcast&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_SHOUTcast)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_SHOUTcast&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_SHOUTcast)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_SHOUTcast&metric=bugs)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_SHOUTcast)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_SHOUTcast&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_SHOUTcast)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_SHOUTcast&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_SHOUTcast)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_SHOUTcast&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_SHOUTcast)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=oe-alliance-plugins_SHOUTcast&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_SHOUTcast)
 
-[![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_shoutcast)
+[![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=oe-alliance-plugins_SHOUTcast)
 
 ---
 
@@ -45,7 +45,7 @@ This plugin is released under GPLv3. See [LICENSE](https://www.gnu.org/licenses/
 
 ### 🤝 Contributing & Contact
 
-shoutcast is created by users for users and we welcome every contribution. There are no highly paid developers. There are only users who have seen a problem and done their best to fix it. This means shoutcast will always need the contributions of users like you. How can you get involved?
+SHOUTcast is created by users for users and we welcome every contribution. There are no highly paid developers. There are only users who have seen a problem and done their best to fix it. This means SHOUTcast will always need the contributions of users like you. How can you get involved?
 
 For questions or feedback, feel free and please open an issue or contribute with a Pull Request!
 
