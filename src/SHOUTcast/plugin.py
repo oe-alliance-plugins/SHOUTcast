@@ -21,7 +21,6 @@
 #  distributed other than under the conditions noted above.
 #
 
-from __future__ import print_function
 from os import path, mkdir, unlink
 from re import compile, findall, S, I
 from requests import get, exceptions
@@ -32,7 +31,7 @@ from twisted.internet import reactor
 from twisted.web.client import HTTPClientFactory
 from twisted.internet.reactor import callInThread
 from xml.etree.cElementTree import fromstring
-from enigma import eServiceReference, eListboxPythonMultiContent, eListbox, gFont, RT_HALIGN_LEFT, RT_HALIGN_RIGHT, RT_VALIGN_CENTER, getDesktop, iPlayableService, iServiceInformation, eTimer, eConsoleAppContainer, ePicLoad
+from enigma import eServiceReference, eListboxPythonMultiContent, eListbox, gFont, RT_HALIGN_LEFT, RT_HALIGN_RIGHT, RT_VALIGN_CENTER, getDesktop, iServiceInformation, eTimer, eConsoleAppContainer, ePicLoad
 from Components.Label import Label
 from Components.Input import Input
 from Components.Pixmap import Pixmap
@@ -1356,34 +1355,6 @@ class SHOUTcastStreamripperRecordingPath(Screen):
 
 	def green(self):
 		self.close(self["filelist"].getSelection()[0])
-
-	def up(self):
-		self["filelist"].up()
-		self.updateTarget()
-
-	def down(self):
-		self["filelist"].down()
-		self.updateTarget()
-
-	def left(self):
-		self["filelist"].pageUp()
-		self.updateTarget()
-
-	def right(self):
-		self["filelist"].pageDown()
-		self.updateTarget()
-
-	def ok(self):
-		if self["filelist"].canDescent():
-			self["filelist"].descent()
-			self.updateTarget()
-
-	def updateTarget(self):
-		currFolder = self["filelist"].getSelection()[0]
-		if currFolder is not None:
-			self["target"].setText(currFolder)
-		else:
-			self["target"].setText(_("Invalid Location"))
 
 	def up(self):
 		self["filelist"].up()
