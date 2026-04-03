@@ -1,0 +1,18 @@
+{
+  "branch": "main",
+  "depends_recipe": "",
+  "description_control": "A client to listen and record SHOUTcast internet radio",
+  "description_recipe": "A client to listen and record SHOUTcast internet radio",
+  "history_source_dir": "shoutcast",
+  "internal_package_name": "enigma2-plugin-extensions-shoutcast",
+  "module_dir_name": "SHOUTcast",
+  "output_subdir": "shoutcast",
+  "package_name": "enigma2-plugin-extensions-shoutcast",
+  "plugin_src_rel": "shoutcast",
+  "python_package": "SHOUTcast",
+  "rdepends_recipe": "",
+  "replaces": "",
+  "repo_name": "shoutcast",
+  "rrecommends": "",
+  "rreplaces": ""
+}
