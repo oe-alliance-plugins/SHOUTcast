@@ -25,7 +25,6 @@ from os import path, mkdir, unlink
 from re import compile, findall, S, I
 from requests import get, exceptions
 from skin import parameters
-from six import ensure_binary, ensure_str
 from urllib.parse import quote, urlparse
 from twisted.internet import reactor
 from twisted.web.client import HTTPClientFactory
@@ -69,6 +68,18 @@ config.plugins.shoutcast.cover_height = ConfigNumber(default=300)
 devid = "fa1jo93O_raeF0v9"
 
 _VALID_URI = compile(br"\A[\x21-\x7e]+\Z")
+
+
+def ensure_binary(s):
+	if isinstance(s, str):
+		return s.encode("utf-8")
+	return s
+
+
+def ensure_str(s):
+	if isinstance(s, bytes):
+		return s.decode("utf-8")
+	return s
 
 
 class SHOUTcastGenre:
