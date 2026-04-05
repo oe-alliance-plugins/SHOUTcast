@@ -26,7 +26,7 @@ from re import compile, findall, S, I
 from requests import get, exceptions
 from skin import parameters
 from six import ensure_binary, ensure_str
-from six.moves.urllib.parse import quote, urlparse
+from urllib.parse import quote, urlparse
 from twisted.internet import reactor
 from twisted.web.client import HTTPClientFactory
 from twisted.internet.reactor import callInThread
