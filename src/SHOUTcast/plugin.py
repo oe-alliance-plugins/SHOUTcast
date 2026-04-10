@@ -448,7 +448,7 @@ class SHOUTcastWidget(Screen):
 	def reloadStationListTimerTimeout(self):
 		self.stopReloadStationListTimer()
 		if self.mode == self.STATIONLIST:
-			# print "[SHOUTcast] reloadStationList: %s " % self.stationListURL
+			# print(f"[SHOUTcast] reloadStationList: {self.stationListURL}")
 			send_url_command(self.stationListURL, None, 10).addCallback(self.callbackStationList).addErrback(self.callbackStationListError)
 
 	def InputBoxStartRecordingCallback(self, return_value=None):
@@ -561,8 +561,10 @@ class SHOUTcastWidget(Screen):
 		if len(devid) > 8:
 			url = self.SC + f"/genre/secondary?parentid={id}&k={devid}&f=xml"
 		else:
-			url = "http://207.200.98.1/sbin/newxml.phtml"
-		send_url_command(url, None, 10).addCallback(self.callbackGenreList).addErrback(self.callbackGenreListError)
+			url = ""
+			# url = "http://207.200.98.1/sbin/newxml.phtml"  # what's that? what for?
+		if url:
+			send_url_command(url, None, 10).addCallback(self.callbackGenreList).addErrback(self.callbackGenreListError)
 
 	def callbackGenreList(self, xmlstring):
 		xmlstring = ensure_str(xmlstring)
@@ -586,7 +588,7 @@ class SHOUTcastWidget(Screen):
 
 	def fillGenreList(self, xmlstring):
 		genreList = []
-		# print "[SHOUTcast] fillGenreList\n%s" % xmlstring
+		# print(f"[SHOUTcast] fillGenreList\n{xmlstring}")
 		try:
 			root = fromstring(xmlstring)
 		except Exception:
@@ -601,7 +603,7 @@ class SHOUTcastWidget(Screen):
 				gid = childs.get("id")
 				gparentid = childs.get("parentid")
 				ghaschilds = childs.get("haschildren")
-				#print "[SHOUTcast] Genre %s id=%s parent=%s haschilds=%s\n" % (gn, gid, gparentid, ghaschilds)
+				# print(f"[SHOUTcast] Genre {gn} id={gid} parent={gparentid} haschilds={ ghaschilds}\n")
 				genreList.append(SHOUTcastGenre(name=gn, id=gid, parentid=gparentid, haschilds=ghaschilds))
 				if ghaschilds == "true":
 					for childlist in childs.findall("genrelist"):
@@ -610,7 +612,7 @@ class SHOUTcastWidget(Screen):
 							gid = genre.get("id")
 							gparentid = genre.get("parentid")
 							ghaschilds = genre.get("haschildren")
-							# print "[SHOUTcast]   Genre %s id=%s parent=%s haschilds=%s\n" % (gn, gid, gparentid, ghaschilds)
+							# print(f"[SHOUTcast]   Genre {gn} id=[gid] parent={gparentid} haschilds={ghaschilds}\n")
 							genreList.append(SHOUTcastGenre(name=gn, id=gid, parentid=gparentid, haschilds=ghaschilds))
 		return genreList
 
@@ -711,9 +713,10 @@ class SHOUTcastWidget(Screen):
 		self["statustext"].setText(_("Getting %s") % self.headerTextString)
 		self["list"].hide()
 		if len(devid) > 8:
-			self.stationListURL = self.SC + f"/station/advancedsearch&f=xml&k={devid}&search={quote(genre)}"
+			self.stationListURL =  f"{self.SC}/station/advancedsearch&f=xml&k={devid}&search={quote(genre)}"
 		else:
-			self.stationListURL = f"http://207.200.98.1/sbin/newxml.phtml?genre={quote(genre)}"
+			self.stationListURL = ""
+		#	self.stationListURL = f"http://207.200.98.1/sbin/newxml.phtml?genre={quote(genre)}"  # what's that? what for?
 		self.station_list_idx = 0
 		send_url_command(self.stationListURL, None, 10).addCallback(self.callbackStationList).addErrback(self.callbackStationListError)
 
@@ -852,11 +855,13 @@ class SHOUTcastWidget(Screen):
 			if len(devid) > 8:
 				self.stationListURL = self.SC + f"/station/advancedsearch&f=xml&k={devid}&search={searchstring}"
 			else:
-				self.stationListURL = f"http://207.200.98.1/sbin/newxml.phtml?search={searchstring}"
+				self.stationListURL = ""
+				# self.stationListURL = f"http://207.200.98.1/sbin/newxml.phtml?search={searchstring}"  # what's that? what for?
 			self.mode = self.SEARCHLIST
 			self.searchSHOUTcastString = searchstring
 			self.station_list_idx = 0
-			send_url_command(self.stationListURL, None, 10).addCallback(self.callbackStationList).addErrback(self.callbackStationListError)
+			if self.stationListURL:
+				send_url_command(self.stationListURL, None, 10).addCallback(self.callbackStationList).addErrback(self.callbackStationListError)
 
 	def config(self):
 		self.stopReloadStationListTimer()
