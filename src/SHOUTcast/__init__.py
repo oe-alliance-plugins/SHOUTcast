@@ -1,21 +1,21 @@
 from Components.Language import language
 from Tools.Directories import resolveFilename, SCOPE_PLUGINS
-import gettext
+from gettext import bindtextdomain, dgettext, gettext
 
 
-def localeInit():
-	gettext.bindtextdomain("SHOUTcast", resolveFilename(SCOPE_PLUGINS, "Extensions/SHOUTcast/locale"))
+def locale_init():
+	bindtextdomain("SHOUTcast", resolveFilename(SCOPE_PLUGINS, "Extensions/SHOUTcast/locale"))
 
 
 def _(txt):
-	t = gettext.dgettext("SHOUTcast", txt)
+	t = dgettext("SHOUTcast", txt)
 	if t == txt:
 		# print "[SHOUTcast] fallback to default translation for", txt
-		t = gettext.gettext(txt)
+		t = gettext(txt)
 	return t
 
 
-localeInit()
-language.addCallback(localeInit)
+locale_init()
+language.addCallback(locale_init)
 
-__version__ = "1.0"
+__version__ = "1.1"
