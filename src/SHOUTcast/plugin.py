@@ -127,7 +127,7 @@ class MYHTTPClientFactory(HTTPClientFactory):
 		connector.connect()
 
 
-def send_url_command(url, context_factory=None, timeout=60, *args, **kwargs):
+def send_url_command(url, timeout=60, *args, **kwargs):
 	parsed = urlparse(url)
 	scheme = parsed.scheme
 	host = parsed.hostname
