@@ -713,7 +713,7 @@ class SHOUTcastWidget(Screen):
 		self["statustext"].setText(_("Getting %s") % self.headerTextString)
 		self["list"].hide()
 		if len(devid) > 8:
-			self.stationListURL =  f"{self.SC}/station/advancedsearch&f=xml&k={devid}&search={quote(genre)}"
+			self.stationListURL = f"{self.SC}/station/advancedsearch&f=xml&k={devid}&search={quote(genre)}"
 		else:
 			self.stationListURL = ""
 		#	self.stationListURL = f"http://207.200.98.1/sbin/newxml.phtml?genre={quote(genre)}"  # what's that? what for?
