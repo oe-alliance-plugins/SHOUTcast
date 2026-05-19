@@ -3,12 +3,15 @@ from Tools.Directories import resolveFilename, SCOPE_PLUGINS
 from gettext import bindtextdomain, dgettext, gettext
 
 
+PluginLanguageDomain = "SHOUTcast"
+
+
 def locale_init():
-	bindtextdomain("SHOUTcast", resolveFilename(SCOPE_PLUGINS, "Extensions/SHOUTcast/locale"))
+	bindtextdomain(PluginLanguageDomain, resolveFilename(SCOPE_PLUGINS, "Extensions/SHOUTcast/locale"))
 
 
 def _(txt):
-	t = dgettext("SHOUTcast", txt)
+	t = dgettext(PluginLanguageDomain, txt)
 	if t == txt:
 		# print "[SHOUTcast] fallback to default translation for", txt
 		t = gettext(txt)
