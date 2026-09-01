@@ -449,7 +449,7 @@ class SHOUTcastWidget(Screen):
 		self.stopReloadStationListTimer()
 		if self.mode == self.STATIONLIST:
 			# print(f"[SHOUTcast] reloadStationList: {self.stationListURL}")
-			send_url_command(self.stationListURL, None, 10).addCallback(self.callbackStationList).addErrback(self.callbackStationListError)
+			send_url_command(self.stationListURL, timeout=10).addCallback(self.callbackStationList).addErrback(self.callbackStationListError)
 
 	def InputBoxStartRecordingCallback(self, return_value=None):
 		if return_value:
@@ -564,7 +564,7 @@ class SHOUTcastWidget(Screen):
 			url = ""
 			# url = "http://207.200.98.1/sbin/newxml.phtml"  # what's that? what for?
 		if url:
-			send_url_command(url, None, 10).addCallback(self.callbackGenreList).addErrback(self.callbackGenreListError)
+			send_url_command(url, timeout=10).addCallback(self.callbackGenreList).addErrback(self.callbackGenreListError)
 
 	def callbackGenreList(self, xmlstring):
 		xmlstring = ensure_str(xmlstring)
@@ -654,7 +654,7 @@ class SHOUTcastWidget(Screen):
 					self["list"].hide()
 					self["statustext"].setText(_("Getting streaming data from\n%s") % sel.name)
 					self.currentStreamingStation = sel.name
-					send_url_command(url, None, 10).addCallback(self.callbackPLS).addErrback(self.callbackStationListError)
+					send_url_command(url, timeout=10).addCallback(self.callbackPLS).addErrback(self.callbackStationListError)
 				elif self.mode == self.FAVORITELIST:
 					self.favorite_list_idx = self["list"].getCurrentIndex()
 					if sel.config_item.type.value == "url":
@@ -668,7 +668,7 @@ class SHOUTcastWidget(Screen):
 						self["list"].hide()
 						self["statustext"].setText(_("Getting streaming data from\n%s") % sel.config_item.name.value)
 						self.currentStreamingStation = sel.config_item.name.value
-						send_url_command(url, None, 10).addCallback(self.callbackPLS).addErrback(self.callbackStationListError)
+						send_url_command(url, timeout=10).addCallback(self.callbackPLS).addErrback(self.callbackStationListError)
 					elif sel.config_item.type.value == "genre":
 						self.getStationList(sel.config_item.name.value)
 				elif self.mode == self.SEARCHLIST and self.searchSHOUTcastString != "":
@@ -718,7 +718,7 @@ class SHOUTcastWidget(Screen):
 			self.stationListURL = ""
 		#	self.stationListURL = f"http://207.200.98.1/sbin/newxml.phtml?genre={quote(genre)}"  # what's that? what for?
 		self.station_list_idx = 0
-		send_url_command(self.stationListURL, None, 10).addCallback(self.callbackStationList).addErrback(self.callbackStationListError)
+		send_url_command(self.stationListURL, timeout=10).addCallback(self.callbackStationList).addErrback(self.callbackStationListError)
 
 	def callbackStationList(self, xmlstring):
 		xmlstring = ensure_str(xmlstring)
@@ -861,7 +861,7 @@ class SHOUTcastWidget(Screen):
 			self.searchSHOUTcastString = searchstring
 			self.station_list_idx = 0
 			if self.stationListURL:
-				send_url_command(self.stationListURL, None, 10).addCallback(self.callbackStationList).addErrback(self.callbackStationListError)
+				send_url_command(self.stationListURL, timeout=10).addCallback(self.callbackStationList).addErrback(self.callbackStationListError)
 
 	def config(self):
 		self.stopReloadStationListTimer()
@@ -897,7 +897,7 @@ class SHOUTcastWidget(Screen):
 		if self.nextGoogle:
 			self.currentGoogle = self.nextGoogle
 			self.nextGoogle = None
-			send_url_command(self.currentGoogle, None, 10).addCallback(self.GoogleImageCallback).addErrback(self.Error)
+			send_url_command(self.currentGoogle, timeout=10).addCallback(self.GoogleImageCallback).addErrback(self.Error)
 		else:
 			self.currentGoogle = None
 
@@ -932,7 +932,7 @@ class SHOUTcastWidget(Screen):
 		if self.nextGoogle:
 			self.currentGoogle = self.nextGoogle
 			self.nextGoogle = None
-			send_url_command(self.currentGoogle, None, 10).addCallback(self.GoogleImageCallback).addErrback(self.Error)
+			send_url_command(self.currentGoogle, timeout=10).addCallback(self.GoogleImageCallback).addErrback(self.Error)
 			return
 		self.currentGoogle = None
 		result = ensure_str(result)
@@ -1035,7 +1035,7 @@ class SHOUTcastWidget(Screen):
 						self.nextGoogle = url
 					else:
 						self.currentGoogle = url
-						send_url_command(url, None, 10).addCallback(self.GoogleImageCallback).addErrback(self.Error)
+						send_url_command(url, timeout=10).addCallback(self.GoogleImageCallback).addErrback(self.Error)
 				if len(sTitle) == 0:
 					sTitle = "n/a"
 				title = _("Title: %s") % sTitle
